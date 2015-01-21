@@ -1,0 +1,24 @@
+Julien Graisse,  EPFL
+CHEOPS: SOC preprocessing  project
+development platform: Ubuntu linux 14.04, using Qt5
+
+
+###############
+# HKinsertion #
+###############
+
+Used to add HK data to fits files. May be tested with simulation data here:
+https://dl.dropboxusercontent.com/u/49123434/SimulatedData/Model_SF100_18000.zip
+To be run, open a terminal in the folder containing the executable a type:
+
+./HKinsertion [PATH to fits files] [PATH to the executable]
+
+ 
+##################
+# FITSconversion #
+##################
+
+Graphical interface to convert a .IMG file in the FITS format.
+Exemple files can be found here:
+
+http://pdsimage.wr.usgs.gov/archive/mro-m-ctx-2-edr-l0-v1.0/mrox_0013/data/
