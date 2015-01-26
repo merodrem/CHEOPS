@@ -1,13 +1,13 @@
 #include"PacketException.h"
 
-Packet_Exception::Packet_Exception(const char *m) : message(m) {
+PacketException::PacketException(const char *m) : message(m) {
 
 }
 
-const char* Packet_Exception::what() const throw(){
+const char* PacketException::what() const throw(){
     return message.c_str();
   }
 
- Packet_Exception::~Packet_Exception() throw(){
+ PacketException::~PacketException() throw(){
 
 }

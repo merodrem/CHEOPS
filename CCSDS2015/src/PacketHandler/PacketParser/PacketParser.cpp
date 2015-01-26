@@ -24,7 +24,9 @@ PacketParser::~PacketParser(){
     delete file;
 }
 
-TM_Packet PacketParser::nextPacket(char* scientific_data){
+
+//TODO: add parameter for info level, origin of message
+TM_Packet PacketParser::nextPacket(char* &scientific_data){
     if(!file->eof()){
         packet_counter++;
         cout << "++++++++++PACKET " << packet_counter << " ++++++++++" << endl;
@@ -106,13 +108,14 @@ TM_Packet PacketParser::nextPacket(char* scientific_data){
         file->read(scientific_data, size_temp);
         sd.scientific = scientific_data;
 
+
         Packet_Data_Field data_field;
         data_field.header = data_header;
         data_field.source_data = sd;
         TM_Packet packet;
         packet.header = header;
         packet.data = data_field;
-
+        delete[] data;
         return packet;
 
     }
